@@ -6,6 +6,12 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --blanc: #C3E2C2;
+  --papier-journal: #EAECCC;
+  --beige: #DBCC95;
+  --gris: #CD8D7A;
+  --noir: #191717;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,11 +23,35 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--blanc);
+  background-blend-mode: darken;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.home-container > h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--noir);
+}
+
+.home-container > h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--noir);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-container > h2 > img {
+  width: 48px;
+  height: 48px;
 }

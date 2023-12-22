@@ -1,0 +1,134 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.article-principal {
+    display: grid;
+    grid-template-rows: minmax(20px, 200px);
+    gap: 10px;
+    margin: 20px;
+    width: 30%;
+    box-shadow: 5px 5px 0px var(--gris);
+    background-color: var(--papier-journal);
+    background-blend-mode: saturation;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    color: var(--noir);
+    opacity: 0;
+    animation: fadeIn .4s ease 0s 1 normal forwards;
+}
+
+.article-principal__title {
+    display: flex;
+    align-items: center;
+}
+
+.article-principal__title h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    
+}
+
+.article-principal__date {
+    display: flex;
+    align-items: center;
+}
+
+.article-principal__date p {
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
+.article-principal__author {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.article-principal__author p {
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.article-principal__category {
+    display: flex;
+    align-items: center;
+}
+
+.article-principal__category p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.article-principal__container-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.article-principal__link {
+    margin-top: 20px;
+}
+
+.article-principal__link a {
+    background-color: var(--blanc);
+    color: var(--noir);
+    padding: 10px;
+    border-radius: 1px solid var(--noir);
+    border-radius: 10px;
+    transition: all .2s;
+}
+
+.article-principal__connexe {
+    margin-top: 20px;
+    background-color: var(--gris);
+    color: var(--blanc);
+    padding: 10px;
+    border-radius: 1px solid var(--noir);
+    border-radius: 10px;
+    transition: all .2s;
+}
+
+.article-principal__connexe:hover {
+    background-color: var(--beige);
+    color: var(--noir);
+}
+
+@media screen and (max-width: 768px) {
+    .article-principal {
+        width: 100%;
+    }
+
+    .article-principal__container-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+    .article-principal {
+        width: 100%;
+    }
+
+    .article-principal__container-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-direction: column;
+    }
+}
